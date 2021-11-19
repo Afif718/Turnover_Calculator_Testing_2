@@ -1,0 +1,203 @@
+ body {
+    background: #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*Heading style*/
+h1 { color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; 
+    line-height: 48px; margin: 0; text-align: center; margin-top: 50px;}
+
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 25px;
+
+}
+.mytabs input[type="radio"] {
+    display: none;
+}
+.mytabs label {
+    padding: 25px;
+    background: #e2e2e2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mytabs .tab {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    order: 1;
+    display: none;
+}
+.mytabs .tab h2 {
+    font-size: 3em;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+    display: block;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background: #f2dfaa;
+    cursor: pointer;
+}
+
+/*Tab 2 Note Style*/
+
+.pStyle{
+    border:  1.5px;
+    border-radius: 10px;
+    text-align: justify;
+  text-justify: inter-word;
+    font-family: "Times New Roman", Times, serif;
+    background: #f2dfaa;
+    color: #000000;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+
+
+/* Table Part starts here */
+
+
+* {
+    font-family: sans-serif; /* Change your font family */
+
+
+}
+
+
+/*this implements on the whole table and how to palce it center*/
+.container-1{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-1 div{
+    border: 1px #ccc solid;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+/* Gap Between Tables */
+.container-1{
+    margin: 25px;
+
+}
+
+
+/*this is for main table elements and design*/
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    max-width: 500px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+
+}
+
+.content-table thead tr {
+    background-color: #1a0f40;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #1a0f40;
+}
+
+
+
+/* Style for inputs c5 & f5*/
+.inputs{
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+    background: #f2dfaa;
+}
+
+/* Style for outputs c5 & f5*/
+.outputs{
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+/*Calculate Button CSS*/
+/* CSS */
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 30px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 15px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+

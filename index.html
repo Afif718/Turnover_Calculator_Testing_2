@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Turn Over Calculator 1</title>
+
+    
+</head>
+<body>
+
+ <!-- Heading Text -->
+ <h1>Turnover Calculator</h1>
+
+
+
+  <div class="mytabs">
+    <input type="radio" id="step1" name="mytabs" checked="checked">
+    <label for="step1">INPUTS</label>
+    <div class="tab">
+
+<!-- this is the main conatainer -->
+      <div class="container-1">
+
+       <!-- Step1 Table -->
+      <div class="table">
+
+
+        <!-- Step 1  / TAB 1 starts here -->
+
+        <!-- This table is for setp 1 calculation (Hour Calculation) -->
+        <table class="content-table">
+
+          <thead>
+            <tr>
+
+                <th style="text-align: left;" colspan="2">Fill In Your Company Details</th>
+            </tr>
+          </thead>
+
+
+          <tbody>
+
+            <tr>
+              <td>Weeks to find replacement employee</td>
+              <td><input type="number" name="replacementEmployee" min="0" id="B3" oninput="validity.valid||(value='');" class="inputs" maxlength="5" placeholder="5" ></td>
+              
+            </tr>
+
+            <tr>
+              <td>Weeks onboarding new employee</td>
+              <td><input type="number" name="onboardingEmployee" min="0" id="B4" oninput="validity.valid||(value='');" class="inputs" maxlength="5" placeholder="3" ></td>
+             <!--  <td><input type="text" class="outputs" id="outh2" readonly></td> -->
+            </tr>
+
+            <tr>
+              <td>Per year salary of departing employee (RM)</td>
+              <td><input type="number" name="perYearSalary" min="0" id="B5" oninput="validity.valid||(value='');" class="inputs" maxlength="5" placeholder="$40,000"></td>
+             <!--  <td><input type="text" class="outputs" id="outh3" readonly></td> -->
+            </tr>
+
+            <tr>
+              <td>Total Employee Turnover (%)</td>
+              <td><input type="number" name="turnoverPercentage" min="0" id="B6" oninput="validity.valid||(value='');" class="inputs" maxlength="5" placeholder="%10"></td>
+             <!--  <td><input type="text" class="outputs" id="outh3" readonly></td> -->
+            </tr>
+
+
+           <!--  ******************************
+            //////////////////////////////
+            ******************************
+            Final CALCULATION BUTTON -->
+
+            <td><button type="button" class="button-29" onclick="finalCalculationButton()">Calculate</button> </td>
+
+
+          </tbody>
+        </table>
+
+    </div>
+
+
+     <!--  ******************************
+            //////////////////////////////
+            ******************************
+     Result Section Table for Tab 1 -->
+
+     <!-- Step1 Table -->
+      <div class="container-1">
+
+     <table class="content-table" style="margin: 0px;">
+
+      <thead>
+        <tr> 
+          <th colspan="2">See Your Turnover Cost</th>
+
+        </tr>
+
+
+        <tr>
+          <th style="background: #f3a51e; color: #000000;">Total Turnover Cost (RM) for one employee</th>
+        
+          <th style="text-align:center; background: #f3a51e;">
+            <input type="text" style="background: #f3a51e; color: #000000; text-align: center; border: none; font-weight: bold; font-size:1em;" id="endoutput1E49" placeholder="$0.00" readonly>
+          </th>
+        </tr>
+
+
+
+        <tr>
+          <th style="background: #f3a51e; color: #000000;">Cost as percentage of departing Employee's Salary</th>
+         
+          <th style="text-align:center; background: #f3a51e;"><input type="text" style="background: #f3a51e; color: #000000; text-align: center; border: none; font-weight: bold; font-size:1em;" id="endoutput2E50" placeholder="0.00 %" readonly></th>
+        </tr>
+
+         <tr>
+          <th style="background: #f3a51e; color: #000000;">Estimated Annual Turnover Cost (RM) </th>
+         
+          <th style="text-align:center; background: #f3a51e;"><input type="text" style="background: #f3a51e; color: #000000; text-align: center; border: none; font-weight: bold; font-size:1em;" id="endoutput3E51" placeholder="$0.00" readonly></th>
+        </tr>
+
+        
+
+        
+        
+      </thead>
+
+    </table>
+</div>
+
+      </div>
+    </div>
+
+
+ <!--    TAB TWO Starts From Here -->
+
+    <input type="radio" id="step2" name="mytabs">
+    <label for="step2">ASSUMPTIONS</label>
+    <div class="tab">
+
+      <p class="pStyle">The calculator will use these basic estimates for the calculation. If you prefer a more accurate calculation, adjust the numbers in the input cells accordingly and continue.</p>
+
+
+      <!-- this is the main conatainer -->
+      <div class="container-1">
+
+      <!-- Section 1 starts here -->
+      <div class="table">
+
+
+        <table class="content-table">
+
+          <thead>
+            <tr>
+              <th colspan="2">General assumptions</th>
+            </tr>
+            
+          </thead>
+
+
+          <tbody>
+
+          <tr>
+            <td>Per year salary of departing employee's co-workets that would fill in in their absence (at 50% since they'll spend 50% of time filling in)</td>
+
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="outputs" maxlength="10"  id="B19" readonly></td>
+          </tr>
+
+
+          <tr>
+            <td>Per year salary of departing employee's supervisor</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="outputs" maxlength="10" id="B20" readonly></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+<!-- Section 2 for TAB 2 -->
+
+ <!-- this is the main conatainer -->
+      <div class="container-1">
+
+      <div class="table">
+
+        <table class="content-table">
+
+          <thead>
+            <tr>
+              <th style="text-align: left;">Time spent for Departing Employee's Offboarding</th>
+              <th style="text-align: center;">Staff invoved (#)</th>
+              <th style="text-align: center;">Hours needed (#)</th>
+            </tr>
+            
+          </thead>
+
+
+          <tbody>
+
+          <tr>
+            <td>Departing Employee (assumption: 2 full days teaching co-workers role)</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B24"></td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10"  id="C24" ></td>
+        </tr>
+
+
+          <tr>
+            <td>Coworkers (2 full days learning role)</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B25"></td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="C25"></td>
+          </tr>
+
+
+
+          <tr>
+            <td>Manager/Supervisor (4 hours supervising / checking in on transition)</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B26"></td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="C26"></td>
+          </tr>
+
+
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Section 3 for TAB 2 -->
+
+ <!-- this is the main conatainer -->
+      <div class="container-1">
+
+      <div class="table">
+
+        <table class="content-table">
+
+          <thead>
+            <tr>
+              <th style="text-align: left;">Vacancy Costs</th>
+              <th style="text-align: center;">Staff (#)</th>
+            </tr>
+            
+          </thead>
+
+
+          <tbody>
+
+          <tr>
+            <td>Coworker completing the role part time (at 50% of his time)</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B31"></td>
+            
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+<!-- Section 4 for TAB 2 -->
+
+ <!-- this is the main conatainer -->
+      <div class="container-1">
+
+      <div class="table">
+
+        <table class="content-table">
+
+          <thead>
+            <tr>
+              <th style="text-align: left;" colspan="2">New Employee Recruitment</th>
+            </tr>
+            
+          </thead>
+
+
+          <tbody>
+
+          <tr>
+            <td>Job Posting</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B35"></td>
+        </tr>
+
+
+          <tr>
+            <td>Recruitment fees (# of months of salary)</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B36"></td>
+          </tr>
+
+
+
+          <tr>
+            <td>Manager/Supervisor (time spent to assess and confirm new employee)</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B37"></td>
+          </tr>
+
+
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <!-- Section 5 for TAB 2 -->
+
+ <!-- this is the main conatainer -->
+      <div class="container-1">
+
+      <div class="table">
+
+        <table class="content-table">
+
+          <thead>
+            <tr>
+              <th style="text-align: left;">New Employee Onboarding</th>
+              <th style="text-align: center;"> Hours</th>
+            </tr>
+            
+          </thead>
+
+
+          <tbody>
+
+          <!-- <tr>
+            <td>New employee hours</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B42"></td>
+        </tr> -->
+
+
+          <tr>
+            <td>Hours for Coworkers (teaching new employee 'ins and outs' during onboarding)</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B43"></td>
+          </tr>
+
+
+
+          <tr>
+            <td>Hours for Manager/Supervisor (supervising during onboarding)</td>
+            <td><input type="number" min="0" oninput="validity.valid||(value='');" class="inputs" maxlength="10" id="B44"></td>
+          </tr>
+        </tbody>
+
+
+      </table>
+<!-- Get back to Main TAB  -->
+<label for="step1" style="border: 2px solid black; padding: 10px; border-radius: 10px; color: black; background: #f2dfaa;" class="button-29">GO BACK TO INPUTS</label>
+
+    </div>
+
+  </div>
+
+    </div>
+
+
+
+
+    
+
+
+
+
+  <!-- JavaScript Code  -->
+
+  <script type="text/javascript" src="index.js"> </script>
+
+
+</body>
+</html>
